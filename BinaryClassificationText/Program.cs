@@ -5,6 +5,11 @@ namespace BinaryClassificationText
 {
     class Program
     {
+        /// <summary>
+        /// 1. Prompts the user to enter the name of a txt file from BinaryClassificationText/TrainingData
+        /// 2. Verifies that the file exists
+        /// </summary>
+        /// <returns>Path to the dataset</returns>
         static string GetTrainingData()
         {
             string datapath;
@@ -20,6 +25,9 @@ namespace BinaryClassificationText
             return datapath;
         }
 
+        /// <summary>
+        /// Console runtime
+        /// </summary>
         static void Main(string[] args)
         {
             Console.WriteLine("~~Binary Classification of Text~~\n");

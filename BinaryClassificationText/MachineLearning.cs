@@ -71,7 +71,7 @@ namespace BinaryClassificationText
         }
 
         /// <summary>
-        /// Creates prediction engine for prediction for a one-time prediction
+        /// Creates prediction engine for a one-time prediction
         /// </summary>
         public void CreatePredictionEngine()
         {
