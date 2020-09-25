@@ -18,7 +18,7 @@
         <member name="M:BinaryClassificationText.MachineLearning.LoadTrainingData(System.String)">
             <summary>
             Loads a dataset from a file.  
-            Splits the input dataset into training data (90%) and evaluation data (90%)
+            Splits the input dataset into training data (90%) and evaluation data (10%)
             </summary>
             <param name="datapath"></param>
         </member>
@@ -66,6 +66,11 @@
         <member name="T:BinaryClassificationText.PredictionData">
             <summary>
             Defines the structure of the prediction
+            </summary>
+        </member>
+        <member name="P:BinaryClassificationText.PredictionData.Prediction">
+            <summary>
+            The boolean value for the calculated prediction.
             </summary>
         </member>
     </members>

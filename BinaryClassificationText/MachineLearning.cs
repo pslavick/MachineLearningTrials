@@ -25,7 +25,7 @@ namespace BinaryClassificationText
 
         /// <summary>
         /// Loads a dataset from a file.  
-        /// Splits the input dataset into training data (90%) and evaluation data (90%)
+        /// Splits the input dataset into training data (90%) and evaluation data (10%)
         /// </summary>
         /// <param name="datapath"></param>
         public void LoadTrainingData(string datapath)
@@ -88,7 +88,6 @@ namespace BinaryClassificationText
             var prediction = predictionEngine.Predict(input);
 
             return prediction;
-
         }
     }
 }

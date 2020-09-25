@@ -25,6 +25,9 @@ namespace BinaryClassificationText
     /// </summary>
     public class PredictionData
     {
+        /// <summary>
+        /// The boolean value for the calculated prediction.
+        /// </summary>
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
     }

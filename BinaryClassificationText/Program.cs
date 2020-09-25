@@ -10,7 +10,7 @@ namespace BinaryClassificationText
             string datapath;
             do
             {
-                Console.WriteLine("Enter a valid filename from /TrainingData");
+                Console.WriteLine("Enter a valid filename from /TrainingData for model training");
                 string filename = Console.ReadLine().ToString();
                 Console.WriteLine();
                 datapath = Path.Combine(Environment.CurrentDirectory, "TrainingData", filename);
@@ -39,15 +39,14 @@ namespace BinaryClassificationText
             string userinput = null;
             do
             {
-                Console.WriteLine("Enter a string that is relative to the loaded training data\n");
+                Console.WriteLine("Enter a string that is relative to the loaded training data ('exit' to close console)\n");
                 userinput = Console.ReadLine().ToString();
 
                 var formatinput = new TrainingData();
                 formatinput.Text = userinput;
 
                 var prediction = ml.Predict(formatinput);
-                Console.WriteLine($"Prediction: {prediction.Prediction}\n");
-                //Console.WriteLine($"Prediction: { (Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative")}\n");
+                Console.WriteLine($"prediction: {prediction.Prediction}\n");
             }
             while (userinput != "exit");
         }
