@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BinaryClassificationText</name>
+    </assembly>
+    <members>
+        <member name="T:BinaryClassificationText.MachineLearning">
+            <summary>
+            Encapsulates ML.NET features
+            </summary>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.#ctor">
+            <summary>
+            Class Constructor:
+            Initialize the context for all ML.NET operations
+            </summary>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.LoadTrainingData(System.String)">
+            <summary>
+            Loads a dataset from a file.  
+            Splits the input dataset into training data (90%) and evaluation data (90%)
+            </summary>
+            <param name="datapath"></param>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.Train">
+            <summary>
+            Creates the pipeline and defines workflows within:
+                1. Transforms text column column to a featurized vector of floats
+                2. Defines the binary classification training algorithm, Fast Tree
+                3. Trains fast tree algorithm and creates the model using the training data
+            </summary>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.Evaluate">
+            <summary>
+            Evaluates the model's accuracy with evaluation data 
+            </summary>
+            <returns>BinaryClassificationMetrics to report accuracy to console</returns>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.CreatePredictionEngine">
+            <summary>
+            Creates prediction engine for prediction for a one-time prediction
+            </summary>
+        </member>
+        <member name="M:BinaryClassificationText.MachineLearning.Predict(BinaryClassificationText.TrainingData)">
+            <summary>
+            Uses the class's prediction engine to make a prediction on one-time instance of data
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BinaryClassificationText.TrainingData">
+            <summary>
+            Defines the structure of the training data
+            </summary>
+        </member>
+        <member name="P:BinaryClassificationText.TrainingData.Text">
+            <summary>
+            The text to be classified
+            </summary>
+        </member>
+        <member name="P:BinaryClassificationText.TrainingData.Classification">
+            <summary>
+            The boolean value for the binary classification
+            </summary>
+        </member>
+        <member name="T:BinaryClassificationText.PredictionData">
+            <summary>
+            Defines the structure of the prediction
+            </summary>
+        </member>
+    </members>
+</doc>
